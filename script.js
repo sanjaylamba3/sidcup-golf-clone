@@ -10,10 +10,12 @@ const arrowDiv = document.querySelector("#arrow-div");
 const arrow = document.querySelector("#arrow");
 
 document.addEventListener("mousemove", (dets) => {
-    cursor.style.left = `${dets.x}px`;
-    cursor.style.top = `${dets.y}px`;
-    cursorBlur.style.left = `${dets.x - 200}px`;
-    cursorBlur.style.top = `${dets.y - 200}px`;
+    setTimeout(function () {
+        cursor.style.left = `${dets.x}px`;
+        cursor.style.top = `${dets.y}px`;
+        cursorBlur.style.left = `${dets.x - 200}px`;
+        cursorBlur.style.top = `${dets.y - 200}px`;
+    }, 100);
 });
 
 gsap.to("#nav", {
@@ -64,7 +66,7 @@ gsap.from("#about-us img,#about-us-in", {
 //     scrollTrigger: {
 //         trigger: ".card",
 //         scroller: "body",
-//         markers: true,
+//         // markers: true,
 //         start: "top 70%",
 //         end: "top 65%",
 //         scrub: 1,

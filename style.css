@@ -46,6 +46,7 @@ html,body{
     z-index: 999;
     /* transition: background-color 1s; */
     transition: background-color linear 0.3s,transform linear 0.3s;
+    transform: translate(10%,-10%);
 
 }
 
